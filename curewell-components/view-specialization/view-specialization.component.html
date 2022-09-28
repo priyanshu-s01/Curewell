@@ -1,0 +1,28 @@
+<h2 align="center">
+  View Specialization
+</h2>
+<div *ngIf="(specializationList?.length > 0)">
+  <div class="table-responsive">
+
+    <table align="center" class="table" style="border:2px solid rgba(220,230,242,1);" *ngIf="specializationList">
+      <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+        <th>Specialization Code</th>
+        <th>Specialization Name</th>
+        <th>Actions</th>
+      
+      </tr>
+
+      <tr id="get_specialization" style="background-color:white" *ngFor="let specialization of specializationList">
+        <!--Add your logic here-->
+        <td>{{specialization.specializationCode}}</td>
+        <td>{{specialization.specializationName}}</td>
+        <td> <button class="btn" >View Doctors</button></td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+<div *ngIf="showMsgDiv">
+  <br />
+  <h3 class="jumbotron" style="text-align:center;">No Specialization Available</h3>
+</div>
